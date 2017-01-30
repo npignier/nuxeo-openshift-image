@@ -1,4 +1,4 @@
-FROM       nuxeo:8.3
+FROM       nuxeo:8.10
 MAINTAINER Nuxeo <packagers@nuxeo.com>
 USER nuxeo
 EXPOSE 8080
