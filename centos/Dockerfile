@@ -15,9 +15,9 @@ ENV NUXEO_USER nuxeo
 RUN useradd -m -d /home/$NUXEO_USER -s /bin/bash $NUXEO_USER
 
 #Add repositories need it for ffmpeg2theora and ffmpeg
-RUN yum -y install epel-release &&
-    rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro &&
-    rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+RUN yum -y install epel-release 
+    && rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro &&
+    && rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
 
 # Add needed convert tools
 RUN yum -y upgrade && yum -y install \
