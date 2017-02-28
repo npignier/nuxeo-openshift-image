@@ -67,4 +67,3 @@ EXPOSE 8080
 EXPOSE 8787
 CMD ["nuxeoctl","console"]
 
-USER nuxeo
