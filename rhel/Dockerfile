@@ -35,7 +35,7 @@ RUN yum -y upgrade && yum -y install \
     ffmpeg2theora \
     ufraw \
     poppler-utils \
-    libreoffice \
+    libreoffice-headless  \
     libwpd-tools \
     perl-Image-ExifTool \
     ghostscript \
