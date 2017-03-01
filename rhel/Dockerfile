@@ -1,5 +1,5 @@
 # vim:set ft=dockerfile:
-FROM rhel7
+FROM registry.access.redhat.com/rhel7
 MAINTAINER Nuxeo <packagers@nuxeo.com>
 
 # install java
