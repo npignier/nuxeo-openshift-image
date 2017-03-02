@@ -71,7 +71,7 @@ RUN mkdir /var/lib/nuxeo \
     && chmod -R a+rw $NUXEO_HOME/* \
 && chmod a+x $NUXEO_HOME/bin/*ctl $NUXEO_HOME/bin/*.sh
 
-USER root
+USER nuxeo
 WORKDIR $NUXEO_HOME
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
