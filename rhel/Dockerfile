@@ -41,13 +41,11 @@ RUN yum -y upgrade && yum -y install \
     ghostscript \
  && rm -rf /var/lib/apt/lists/*
 
-ENV NUXEO_VERSION 8.10
-ENV NUXEO_MD5 29e67a19bba54099093b51d892926be1
+ENV NUXEO_VERSION 10.10
 ENV NUXEO_HOME /opt/nuxeo/server
 
 # Add distribution
 RUN curl -fsSL "http://cdn.nuxeo.com/nuxeo-${NUXEO_VERSION}/nuxeo-server-${NUXEO_VERSION}-tomcat.zip" -o /tmp/nuxeo-distribution-tomcat.zip \
-    && echo "$NUXEO_MD5 /tmp/nuxeo-distribution-tomcat.zip" | md5sum -c - \
     && mkdir -p /tmp/nuxeo-distribution $(dirname $NUXEO_HOME) \
     && unzip -q -d /tmp/nuxeo-distribution /tmp/nuxeo-distribution-tomcat.zip \
     && DISTDIR=$(/bin/ls /tmp/nuxeo-distribution | head -n 1) \
